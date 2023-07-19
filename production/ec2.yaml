@@ -1,0 +1,12 @@
+apiVersion: ec2.aws.crossplane.io/v1alpha1
+kind: Instance
+metadata:
+  name: my-sample-instance
+spec:
+  forProvider:
+    region: ap-south-1
+    imageId: ami-0b9ecf71fe947bbdd
+    instanceType: t2.micro
+    keyName: eks-poc-wkr
+  providerConfigRef:
+    name: awsconfig
